@@ -26,7 +26,7 @@ if(!empty($id)){
 
    
     
-    $dados = ['erro' => false, 'dados' => $dados,'dadosImg' => $dadosImg];
+    $dados = ['erro' => false, 'dados' => $dados];
 
 }else{
     $dados = ['erro' => true, 'msg' => 'Erro no tramite'];

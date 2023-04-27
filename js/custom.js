@@ -40,7 +40,7 @@
     
      }else{
 
-        document.getElementById('imgProd').innerHTML = '<img src="src/uploads/'+resposta['dadosImg'].imagem+'" class="card-img-top" alt="...">' ;
+        document.getElementById('imgProd').innerHTML = '<img src="./src/uploads/'+resposta['dados'].imagem+'" class="card-img-top" alt="...">' ;
         document.getElementById('nome').innerHTML = '<input type="text" name="nome" id="nome" class="" value="'+resposta['dados'].nome+'" >' ;
         document.getElementById('descricao').innerHTML = '<input type="text" name="descricao" id="descricao" class="" value="'+resposta['dados'].descricao+'" >' ;
         document.getElementById('largura').innerHTML = '<input type="text" name="largura" id="largura" class="" value="'+resposta['dados'].largura+'" >' ;
@@ -51,6 +51,38 @@
         document.getElementById('id').innerHTML = '<input type="hidden" name="id" id="id" class="" value="'+resposta['dados'].id+'" >' ;
         
     }
+
+ }
+
+    //UPDATE NA PUBLICAÇÃO
+
+    async function upProd(){
+
+    const cadForm = document.getElementById("formProd");
+
+        console.log("chegou a requisição para ser atualizada")
+
+        const dadosForm =  new FormData(cadForm);
+        dadosForm.append("add", 1)
+
+        const dadosPubli = await fetch("php/atualizarProd.php",{
+            method: "POST",
+            body:dadosForm
+        });
+        const respostaPubli = await dadosPubli.json();
+        console.log(respostaPubli)
+
+        if(respostaPubli['erro']){
+            document.getElementById('msgADD').innerHTML ='<div class="alert alert-danger" role="alert">'+respostaPubli['msg']+'</div>'  ;
+            
+                //const visModal = document.getElementById("feedUser");
+            // visModal.show();
+        }else{
+            document.getElementById('msgADD').innerHTML ='<div class="alert alert-success" role="alert">'+respostaPubli['msg']+'</div>'  ;
+
+            console.log(respostaPubli);
+        }
+
 
  }
 

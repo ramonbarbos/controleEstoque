@@ -117,8 +117,8 @@ include '../class/Painel.php';
         <h5 class="modal-title" id="staticBackdropLabel">Editar</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-                <div class="modal-body">
-                <div class="card d-flex" style="width: 20rem; margin-right: 5px;">
+                <div class="modal-body" >
+                
 
                 <span id="msgRes" ></span>
                 <span id="msgADD" ></span>
@@ -159,11 +159,11 @@ include '../class/Painel.php';
                         </div> 
                             <span id="id" ></span>
                         <div class="d-flex" >
-                            <button type="submit" class="btn btn-outline-success" >Salvar</button>
+                            <input type="button" onclick="upProd()" class="btn btn-outline-success" value="Salvar" >
                         </div>
                 </form>
                         
-                </div>
+               
             </div>
       </div>
       
