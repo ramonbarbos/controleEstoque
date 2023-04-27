@@ -1,6 +1,7 @@
 <?php
 include './src/class/Componente.php';
 include 'config.php';
+
 ?>
 
 
@@ -14,6 +15,8 @@ include 'config.php';
     <!--CSS -->
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH?>css/style_sidebar.css">
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH?>css/body.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH?>css/produtos.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH?>css/usuarios.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH?>_bootstrap/css/bootstrap.css">
@@ -58,6 +61,7 @@ include 'config.php';
       <script src="<?php echo INCLUDE_PATH?>_bootstrap/js/bootstrap.min.js"></script>
       <script src="<?php echo INCLUDE_PATH?>js/js_sidebar.js"></script>
       <script src="<?php echo INCLUDE_PATH?>js/funcs.js"></script>
+      <script src="<?php echo INCLUDE_PATH?>js/custom.js"></script>
       
 </body>
 </html>

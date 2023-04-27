@@ -2,12 +2,14 @@
 
 *{
 	font-family: 'Francois One', sans-serif;
-
+	
 }
 
 body {
 	margin: 0;
 	padding: 0;
+	overflow-y: hidden;
+
 }
 header {
 	background-color: #333;
