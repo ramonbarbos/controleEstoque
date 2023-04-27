@@ -27,6 +27,27 @@
 
  }
  
+  //DELETAR  PUBLICAÇÃO
+  async function apagarProd(id){
+    console.log("Envido: " +id)
+    const dados = await fetch("php/apagarProd.php?id=" + id) //enviar
+    const resposta = await dados.json(); //receber
+    
+
+    if(resposta['erro']){
+        
+        alert(resposta['msg'])
+         }else{
+    
+        alert(resposta['msg'])
+            
+        }
+
+    window.location.reload();
+
+
+
+}
 
   //BUSCAR PRODUTO
   async function editarProd(id){
