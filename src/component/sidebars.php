@@ -9,6 +9,7 @@
 				<li><a href="/"><i class='bx bxs-home-smile'></i> <span id="tituloAba1"> Status</span></a></li>
 				<li><a href="/new_produtos"><i class='bx bxs-customize'></i> <span id="tituloAba2"> Produtos</span></a></li>
 				<li><a href="/new_usuarios"><i class='bx bxs-user-plus'></i> <span id="tituloAba3"> Usuarios</span></a></li>
+				<li><a href="/pendentes"><i class='bx bxs-user-plus'></i> <span id="tituloAba3"> Pendentes</span></a></li>
 			</ul>
 		</nav>
 	</aside>
@@ -17,9 +18,3 @@
 		<p>Clique em um link na barra lateral para começar...</p>
 	</main>
 
-	<script>
-function teste(){
-
-console.log('chegou')
-}
-</script>

@@ -61,7 +61,8 @@ include 'config.php';
       <script src="<?php echo INCLUDE_PATH?>_bootstrap/js/bootstrap.min.js"></script>
       <script src="<?php echo INCLUDE_PATH?>js/js_sidebar.js"></script>
       <script src="<?php echo INCLUDE_PATH?>js/funcs.js"></script>
-      <script src="<?php echo INCLUDE_PATH?>js/custom.js"></script>
+      <script src="js/custom.js"></script>
+
       
 </body>
 </html>

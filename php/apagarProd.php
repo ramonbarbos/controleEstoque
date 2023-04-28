@@ -17,7 +17,7 @@ if(!empty($id)){
     $resultImg->execute();
     $imagens = $resultImg->fetchAll();
     foreach($imagens as $key => $value){
-        @unlink(BASE_DIR_PAINEL.'./uploads/'.$imagens);
+        @unlink(BASE_DIR_PAINEL.'src/uploads/'.$imagens);
     }
 
     //Deletar Produto

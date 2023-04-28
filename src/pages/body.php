@@ -1,7 +1,7 @@
 <?php
 include '../class/Painel.php';
-
-    if(isset($_GET['pendente']) == false){
+include '../class/Componente.php';
+   
 
 ?>
 
@@ -9,7 +9,7 @@ include '../class/Painel.php';
 
 <div class="container">
 
-<h3><i class='bx bxs-package' ></i> Produtos</h3>
+<h3><i class='bx bxs-note'></i> Produtos</h3>
 
     <div class="container-cadastros">
 
@@ -18,10 +18,11 @@ include '../class/Painel.php';
                             $sql = MySql::conectar()->prepare("SELECT * FROM `tb_admin.estoque` WHERE quantidade = 0");
                             $sql->execute();
                             if($sql->rowCount() > 0 ){
-                                Painel::alerta('sucesso','<div class="alert alert-warning" style="color:#85202e; font-size: 22px;" role="alert"><i class="bx bxs-info-circle"   ></i>Voce está com produtos em falta! Clique <a href="'.INCLUDE_PATH_PAGES.'body&pendente"> aqui </a> para ver</div>');
+                                Painel::alerta('sucesso','<div class="alert alert-warning" style="color:#85202e; font-size: 22px;" role="alert"><i class="bx bxs-info-circle"   ></i>Voce está com produtos em falta! Clique <a data-bs-toggle="modal" data-bs-target="#viewPendentes" style="color:blue;"> aqui </a> para ver</div>');
                             }
 
                         ?>
+                    
              </div>
   
                 <form style="width: 600px;" method="post" enctype="multipart/form-data">  
@@ -73,7 +74,7 @@ include '../class/Painel.php';
                                         <td><?php echo $value['nome'] ?></td>
                                         <td><?php echo $value['quantidade'] ?></td>
                                         <td><a     onclick="editarProd(<?php echo $value['id'] ?>)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><i class='bx bxs-pencil' style='color:#01aaf6; font-size:25px'  ></i></a></td>
-                                        <td><a     onclick="apagarProd(<?php echo $value['id'] ?>)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><i class='bx bxs-trash' style='color:#f60118;font-size:25px'  ></i></a></td>
+                                        <td><a     onclick="apagarProd(<?php echo $value['id'] ?>)" ><i class='bx bxs-trash' style='color:#f60118;font-size:25px'  ></i></a></td>
                                     </tr>
                                     <?php } ?>
                                 </tbody>
@@ -87,28 +88,6 @@ include '../class/Painel.php';
 
 </div>
 
-<?php 
-  } else{  ?>
-
-<div class="container">
-
-<h3><i class='bx bxs-package' ></i> Produtos</h3>
-
-    <div class="container-cadastros">
-
-    <h4><a href="<?php echo INCLUDE_PATH_PAGES?>body">No estoque</a> > Pendentes</h4>
-
-    <span id="msg" ></span>
-
-
-                  <h1>dsdsds</h1>
-
-    </div>
-
-    </div>
-
-
-    <?php }?>
         <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -163,6 +142,67 @@ include '../class/Painel.php';
                         </div>
                 </form>
                         
+               
+            </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+        <!-- Modal View -->
+        <div class="modal fade" id="viewPendentes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewPendentesdrop" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="viewPendentesdrop">Editar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+                <div class="modal-body" >
+                
+                <div class="content-table">
+                            
+             
+                            <table class="table table-hover">
+                                               <thead>
+                                                   <tr>
+                                                   <th scope="col">Codigo</th>
+                                                   <th scope="col">Nome do Produto</th>
+                                                   <th scope="col">Quantidade</th>
+                                                   <th scope="col"> </th>
+                                                   <th scope="col"> </th>
+                                                   </tr>
+                                               </thead>
+                                               <tbody>
+                                               <?php 
+                      
+
+                                                    $sql = MySql::conectar()->prepare("SELECT * FROM `tb_admin.estoque` WHERE quantidade = 0 ");
+                                                    $sql->execute();
+                                                    $produtos = $sql->fetchAll();
+                                                    if(count($produtos) == 0){
+                                                        echo 'Nenhum produto em falta!';
+                                                    }
+                                                    foreach( $produtos as $key => $value){ 
+                                                
+
+                      
+                                                   ?>
+
+                             
+                                                   <tr>
+                                                       <th scope="row"><?php echo $value['id'] ?></th>
+                                                       <td><?php echo $value['nome'] ?></td>
+                                                       <td><?php echo $value['quantidade'] ?></td>
+                                                       <td><a     onclick="editarProd(<?php echo $value['id'] ?>)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><i class='bx bxs-pencil' style='color:#01aaf6; font-size:25px'  ></i></a></td>
+                                                       <td><a     onclick="apagarProd(<?php echo $value['id'] ?>)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><i class='bx bxs-trash' style='color:#f60118;font-size:25px'  ></i></a></td>
+                                                   </tr>
+                                                   <?php } ?>
+                                               </tbody>
+                                   </table>
+                                               
+                       </div>
                
             </div>
       </div>

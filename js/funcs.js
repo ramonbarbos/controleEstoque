@@ -27,6 +27,7 @@ function loadPage(page) {
 // Definindo as rotas para cada página em seu site
 const routes = {
 	'/': 'src/pages/body.php',
+	'/pendentes': 'src/pages/body&pendentes.php',
 	'/new_produtos': 'src/pages/new_produtos.php',
 	'/new_usuarios': 'src/pages/new_usuarios.php',
 };
