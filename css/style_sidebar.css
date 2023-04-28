@@ -68,9 +68,20 @@ button {
  color: white;
 
 }
-
+.contentTitle{
+	display: flex;
+	color: #fff;
+	width: 100%;
+	align-items: center;
+}
 #sidebar.collapsed {
     width: 50px;
+}
+
+
+#titulo.title{
+	display: none;	
+	
 }
 
 #tituloAba1.none{

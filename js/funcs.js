@@ -1,5 +1,6 @@
 const sidebar = document.getElementById('sidebar');
 const sidebarToggle = document.getElementById('sidebar-toggle');
+const titulo = document.getElementById('titulo');
 const tituloAba1 = document.getElementById('tituloAba1');
 const tituloAba2 = document.getElementById('tituloAba2');
 const tituloAba3 = document.getElementById('tituloAba3');
@@ -7,6 +8,7 @@ const tituloAba3 = document.getElementById('tituloAba3');
 sidebarToggle.addEventListener('click', () => {
     sidebar.classList.toggle('collapsed');
     sidebarToggle.classList.toggle('menu');
+    titulo.classList.toggle('title');
     tituloAba1.classList.toggle('none');
     tituloAba2.classList.toggle('none');
     tituloAba3.classList.toggle('none');

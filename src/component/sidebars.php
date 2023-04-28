@@ -1,7 +1,8 @@
 
 	<aside id="sidebar">
 		<nav>
-	    <div>
+	    <div class="contentTitle">
+			<span id="titulo">Estoque</span>
 			<button id="sidebar-toggle"><i class='bx bxs-grid' ></i></button>
 		</div>
 
@@ -9,7 +10,6 @@
 				<li><a href="/"><i class='bx bxs-home-smile'></i> <span id="tituloAba1"> Status</span></a></li>
 				<li><a href="/new_produtos"><i class='bx bxs-customize'></i> <span id="tituloAba2"> Produtos</span></a></li>
 				<li><a href="/new_usuarios"><i class='bx bxs-user-plus'></i> <span id="tituloAba3"> Usuarios</span></a></li>
-				<li><a href="/pendentes"><i class='bx bxs-user-plus'></i> <span id="tituloAba3"> Pendentes</span></a></li>
 			</ul>
 		</nav>
 	</aside>
