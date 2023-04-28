@@ -61,14 +61,14 @@
     
      }else{
 
-        document.getElementById('imgProd').innerHTML = '<img src="./src/uploads/'+resposta['dados'].imagem+'" class="card-img-top" alt="...">' ;
+        document.getElementById('imgProd').innerHTML = '<img src="./src/uploads/'+resposta['dados'].imagem+'" class="card-img" alt="...">' ;
         document.getElementById('nome').innerHTML = '<input type="text" name="nome" id="nome" class="" value="'+resposta['dados'].nome+'" >' ;
         document.getElementById('descricao').innerHTML = '<input type="text" name="descricao" id="descricao" class="" value="'+resposta['dados'].descricao+'" >' ;
-        document.getElementById('largura').innerHTML = '<input type="text" name="largura" id="largura" class="" value="'+resposta['dados'].largura+'" >' ;
-        document.getElementById('altura').innerHTML = '<input type="text" name="altura" id="altura" class="" value="'+resposta['dados'].altura+'" >' ;
-        document.getElementById('comprimento').innerHTML = '<input type="text" name="comprimento" id="comprimento" class="" value="'+resposta['dados'].comprimento+'" >' ;
-        document.getElementById('peso').innerHTML = '<input type="text" name="peso" id="peso" class="" value="'+resposta['dados'].peso+'" >' ;
-        document.getElementById('quantidade').innerHTML = '<input type="text" name="quantidade" id="quantidade" class="" value="'+resposta['dados'].quantidade+'" >' ;
+        document.getElementById('largura').innerHTML = '<input type="number" name="largura" id="largura" class="" value="'+resposta['dados'].largura+'" >' ;
+        document.getElementById('altura').innerHTML = '<input type="number" name="altura" id="altura" class="" value="'+resposta['dados'].altura+'" >' ;
+        document.getElementById('comprimento').innerHTML = '<input type="number" name="comprimento" id="comprimento" class="" value="'+resposta['dados'].comprimento+'" >' ;
+        document.getElementById('peso').innerHTML = '<input type="number" name="peso" id="peso" class="" value="'+resposta['dados'].peso+'" >' ;
+        document.getElementById('quantidade').innerHTML = '<input type="number" name="quantidade" id="quantidade" class="" value="'+resposta['dados'].quantidade+'" >' ;
         document.getElementById('id').innerHTML = '<input type="hidden" name="id" id="id" class="" value="'+resposta['dados'].id+'" >' ;
         
     }

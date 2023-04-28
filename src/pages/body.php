@@ -102,38 +102,38 @@ include '../class/Componente.php';
                 <span id="msgRes" ></span>
                 <span id="msgADD" ></span>
 
-            <div class="">
-                <span id="imgProd"></span>
-            </div>
+                    <div class="">
+                        <span id="imgProd"></span>
+                    </div>
                 <form action="" method="post" id="formProd">
                 
                     <div class="card-body">
-                        <div class="">
-                            <span class="">Nome:</span>
+                        <div class="contentLabel">
+                            <span class="textlabel">Nome:</span>
                             <span id="nome"></span>
                         </div>
-                        <div class="">
-                            <span class="">Descrição:</span>
+                        <div class="contentLabel">
+                            <span class="textlabel">Descrição:</span>
                             <span id="descricao"></span>
                         </div> 
-                        <div class="">
-                            <span class="">Largura:  </span>
+                        <div class="contentLabel">
+                            <span class="textlabel">Largura:  </span>
                             <span id="largura"></span>
                         </div>  
-                        <div class="">
-                            <span class="">Altura:  </span>
+                        <div class="contentLabel">
+                            <span class="textlabel">Altura:  </span>
                             <span id="altura"></span>
                         </div> 
-                        <div class="">
-                            <span class="">Comprimento:  </span>
+                        <div class="contentLabel">
+                            <span class="textlabel">Comprimento:  </span>
                             <span id="comprimento"></span>
                         </div> 
-                        <div class="">
-                            <span class="">Peso:  </span>
+                        <div class="contentLabel">
+                            <span class="textlabel">Peso:  </span>
                             <span id="peso"></span>
                         </div> 
-                        <div class="">
-                            <span class="">Quantidade:  </span>
+                        <div class="contentLabel">
+                            <span class="textlabel">Quantidade:  </span>
                             <span id="quantidade"></span>
                         </div> 
                             <span id="id" ></span>

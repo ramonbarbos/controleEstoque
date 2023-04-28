@@ -13,3 +13,32 @@
     display: flex;
     
 }
+.modal-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card-img{
+    width: 50%;
+    height: 50%;
+}
+.contentLabel{
+    display: flex;
+}
+.textlabel{
+    width: 150px;
+}
+
+.contentLabel input[type=number],
+.contentLabel input[type=text]{
+    border: none;
+  border-bottom: 2px solid rgb(147, 147, 147);
+}
+
+.contentLabel input[type=number]:focus,
+.contentLabel input[type=text]:focus{
+    outline: none;
+    background-color: #ffedff;
+
+}
